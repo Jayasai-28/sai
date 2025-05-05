@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snakes and Ladders</title>
+    <style>
+        .container{
+            background-size:cover ;
+            display:inline-grid;
+            grid-template-columns: repeat(10,50px);
+            grid-template-rows: repeat(10,50px);
+            /* justify-content: center; */
+            background:url('/project/board.jpeg');
+            background-repeat: no-repeat;
+            background-size: 500px 500px;
+        }
+        .container div {
+            border:1px solid black;
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="tile100">100</div>
+<div class="tile99">99</div>
+<div class="tile98">98</div>
+<div class="tile97">97</div>
+<div class="tile96">96</div>
+<div class="tile95">95</div>
+<div class="tile94">94</div>
+<div class="tile93">93</div>
+<div class="tile92">92</div>
+<div class="tile91">91</div>
+<div class="tile81">81</div>
+<div class="tile82">82</div>
+<div class="tile83">83</div>
+<div class="tile84">84</div>
+<div class="tile85">85</div>
+<div class="tile86">86</div>
+<div class="tile87">87</div>
+<div class="tile88">88</div>
+<div class="tile89">89</div>
+<div class="tile90">90</div>
+<div class="tile80">80</div>
+<div class="tile79">79</div>
+<div class="tile78">78</div>
+<div class="tile77">77</div>
+<div class="tile76">76</div>
+<div class="tile75">75</div>
+<div class="tile74">74</div>
+<div class="tile73">73</div>
+<div class="tile72">72</div>
+<div class="tile71">71</div>
+<div class="tile61">61</div>
+<div class="tile62">62</div>
+<div class="tile63">63</div>
+<div class="tile64">64</div>
+<div class="tile65">65</div>
+<div class="tile66">66</div>
+<div class="tile67">67</div>
+<div class="tile68">68</div>
+<div class="tile69">69</div>
+<div class="tile70">70</div>
+<div class="tile60">60</div>
+<div class="tile59">59</div>
+<div class="tile58">58</div>
+<div class="tile57">57</div>
+<div class="tile56">56</div>
+<div class="tile55">55</div>
+<div class="tile54">54</div>
+<div class="tile53">53</div>
+<div class="tile52">52</div>
+<div class="tile51">51</div>
+<div class="tile41">41</div>
+<div class="tile42">42</div>
+<div class="tile43">43</div>
+<div class="tile44">44</div>
+<div class="tile45">45</div>
+<div class="tile46">46</div>
+<div class="tile47">47</div>
+<div class="tile48">48</div>
+<div class="tile49">49</div>
+<div class="tile50">50</div>
+<div class="tile40">40</div>
+<div class="tile39">39</div>
+<div class="tile38">38</div>
+<div class="tile37">37</div>
+<div class="tile36">36</div>
+<div class="tile35">35</div>
+<div class="tile34">34</div>
+<div class="tile33">33</div>
+<div class="tile32">32</div>
+<div class="tile31">31</div>
+<div class="tile21">21</div>
+<div class="tile22">22</div>
+<div class="tile23">23</div>
+<div class="tile24">24</div>
+<div class="tile25">25</div>
+<div class="tile26">26</div>
+<div class="tile27">27</div>
+<div class="tile28">28</div>
+<div class="tile29">29</div>
+<div class="tile30">30</div>
+<div class="tile20">20</div>
+<div class="tile19">19</div>
+<div class="tile18">18</div>
+<div class="tile17">17</div>
+<div class="tile16">16</div>
+<div class="tile15">15</div>
+<div class="tile14">14</div>
+<div class="tile13">13</div>
+<div class="tile12">12</div>
+<div class="tile11">11</div>
+<div class="tile1">1</div>
+<div class="tile2">2</div>
+<div class="tile3">3</div>
+<div class="tile4">4</div>
+<div class="tile5">5</div>
+<div class="tile6">6</div>
+<div class="tile7">7</div>
+<div class="tile8">8</div>
+<div class="tile9">9</div>
+<div class="tile10">10</div>
+    </div>
+    <button onclick="roll()">Roll</button>
+    <h1 class="head"></h1>
+    <img class="img1" src="" >
+    <audio class="audio" src=""></audio>
+    <script>
+        
+        let div=document.createElement("div")
+        div.style.height="30px"
+        div.style.width="30px"
+        div.style.backgroundColor="black"
+        let c=0
+        function roll(){
+            let random=Math.floor(Math.random()*6)
+            document.querySelector(".img1").setAttribute("src",` /project/D${random}.jpeg`)
+
+            if(c+random<=100){
+                c=c+random
+                let tile=document.getElementsByClassName(`tile${c}`)[0]
+                tile.appendChild(div)
+            }
+            if(c==4){
+                c=c+21
+                let tile=document.getElementsByClassName(`tile${c}`)[0]
+                tile.appendChild(div)
+            }
+            if(c==27){
+                c=c-22
+                let tile=document.getElementsByClassName(`tile${c}`)[0]
+                tile.appendChild(div)
+            }
+            if(c==13){
+                c=c+33
+                let tile=document.getElementsByClassName(`tile${c}`)[0]
+                tile.appendChild(div)
+            }
+            if(c==33){
+                c=c+16
+                let tile=document.getElementsByClassName(`tile${c}`)[0]
+                tile.appendChild(div)
+            }
+            if(c==40){
+                c=c-37
+                let tile=document.getElementsByClassName(`tile${c}`)[0]
+                tile.appendChild(div)
+            }
+            if(c==43){
+                c=c-25
+                let tile=document.getElementsByClassName(`tile${c}`)[0]
+                tile.appendChild(div)
+            }
+            if(c==50){
+                c=c+19
+                let tile=document.getElementsByClassName(`tile${c}`)[0]
+                tile.appendChild(div)
+            }
+            if(c==54){
+                c=c-23
+                let tile=document.getElementsByClassName(`tile${c}`)[0]
+                tile.appendChild(div)
+            }
+            if(c==62){
+                c=c+19
+                let tile=document.getElementsByClassName(`tile${c}`)[0]
+                tile.appendChild(div)
+            }
+            if(c==66){
+                c=c-21
+                let tile=document.getElementsByClassName(`tile${c}`)[0]
+                tile.appendChild(div)
+            }
+            if(c==74){
+                c=c+18
+                let tile=document.getElementsByClassName(`tile${c}`)[0]
+                tile.appendChild(div)
+            }
+            if(c==76){
+                c=c-18
+                let tile=document.getElementsByClassName(`tile${c}`)[0]
+                tile.appendChild(div)
+            }
+            if(c==89){
+                c=c-36
+                let tile=document.getElementsByClassName(`tile${c}`)[0]
+                tile.appendChild(div)
+            }
+            if(c==99){
+                c=c-58
+                let tile=document.getElementsByClassName(`tile${c}`)[0]
+                tile.appendChild(div)
+            }
+            if(c==100){
+                document.querySelector(".head").innerHTML="You won the game"
+                document.querySelector(".img1").setAttribute("src",` /project/won1.jpeg`)
+                document.querySelector(".audio").setAttribute("src",`/visual/beat_it_edited.mp3`)
+            }
+            if(c>100){
+                c=c-random
+                let tile=document.getElementsByClassName(`tile${c}`)[0]
+                tile.appendChild(div)
+            }
+            if(c==0){
+                document.querySelector(".head").innerHTML="You lost the game"
+                document.querySelector(".img1").setAttribute("src", `/project/D0.png`)
+            }
+            
+        }
+        
+   </script>
+</body>
+</html>

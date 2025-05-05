@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom - Document object model</title>
+    <style>
+        .myclass{
+            width:100px;
+            height: 100px;
+            background-color: brown;
+            border:2px solid white;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <div id="new">
+        <h1>heading1</h1>
+        <h2>heading2</h2>
+        <h3>heading3</h3>
+        <h4>heading4</h4>
+    </div>
+    <form action=" ">
+        <input type="text" id="inp">
+
+    </form>
+    <button onclick="create()">Submit</button>
+    <script>
+        function create(){
+            let a=document.getElementById('inp').value
+            console.log(a)
+        }
+    </script>
+    <h1>Hello</h1>
+    <div id="myid1">
+
+            
+        </div>
+        <div class="myclass"></div>
+        <div class="myclass"></div>
+        <div class="myclass"></div>
+        <div class="myclass"></div>
+        <img class="img" src="" alt="">
+   <CENTER> <button  class="btn btn-info rounded-pill" onclick="randomcolour()">click me!</button></CENTER>
+   <CENTER> <button  class="btn btn-info rounded-pill" onclick="wall()">click me!</button></CENTER>
+
+    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, facere?</p>
+    <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem optio, pariatur iusto maxime praesentium exercitationem ut nostrum impedit nemo asperiores.</p>
+    <script src="/javascript/dom.js"></script>
+</body>
+</html>

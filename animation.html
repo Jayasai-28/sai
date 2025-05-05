@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rockin' Hedgehog</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: whitesmoke;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .hedgehog {
+      width: 250px;
+      height: auto;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .hedgehog:hover {
+      transform: scale(1.05) rotate(-2deg);
+    }
+
+    h1 {
+      margin-top: 20px;
+      color: green;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: red;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <img src="/project/logo.jpeg" alt="Rock Hedgehog" class="hedgehog" id="rocker">
+  <h1>Let's Rock!</h1>
+  <button class="btn" onclick="rockOut()">Play Guitar 🎸</button>
+
+  <script>
+    function rockOut() {
+      const hedgehog = document.getElementById('rocker');
+      hedgehog.style.transform = 'scale(1.2) rotate(5deg)';
+      setTimeout(() => {
+        hedgehog.style.transform = 'scale(1) rotate(0deg)';
+      }, 500);
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img class="img1" src="" alt="">
+    <img class="img2" src="" alt="">
+    <h1></h1>
+    <script>
+        let l=[1,2,3,4,5,6]
+        let player1=prompt("enter player 1 name")
+        let player2=prompt("enter player 2 name")
+        N=Math.floor(Math.random()*6)
+        V=Math.floor(Math.random()*6)
+        console.log(l[N])
+        console.log(l[V])
+        document.getElementsByClassName('img1')[0].setAttribute("src",`/project/D${l[N]}.jpeg`)
+        document.getElementsByClassName('img2')[0].setAttribute("src",`/project/D${l[V]}.jpeg`)
+        if(l[N]>l[V]){
+            document.getElementsByClassName('h1')[0].innerHTML=`${player1} Won ${player2}lost`
+        }
+        else if(l[N]<l[V]){
+            document.getElementsByTagName('h1')[0].innerHTML = `${player1} lost ${player2}win`
+        }
+        else{
+            
+            document.getElementsByTagName('h1')[0].innerHTML = `Both are tie`
+        }
+
+    </script>
+</body>
+</html>
